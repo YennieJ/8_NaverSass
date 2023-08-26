@@ -223,6 +223,66 @@ body {
   background: brown;
 }
 
-.five {
-  background: orange;
+.four {
+  border: 1px solid #dadcdf;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+.account p {
+  font-size: 16px;
+  margin: 0px;
+}
+.account .login {
+  padding: 17px 0px;
+  background-color: #03c75a;
+  border-radius: 5px;
+  color: #fff;
+  margin: 13px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.account .login i {
+  background: url(../img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -120px -166px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 72px;
+  height: 15px;
+  margin: 2px 1px 0 0;
+  vertical-align: top;
+}
+.account .login:hover {
+  filter: brightness(0.95);
+}
+.account .find {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  color: #606060;
+}
+.account .find li {
+  list-style: none;
+}
+.account .find li:nth-child(1)::after,
+.account .find li:nth-child(2)::after {
+  content: "|";
+  color: #d3d5d7;
+  margin: 0px 12px;
+}
+.account .find li:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
