@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8조</title>
 
-    <style>
-      .container {
-        width: 1280px;
-        margin: auto;
-        border: 1px solid red;
-      }
-      .inner1 {
-        /* height: 260px; */
-      }
-      .inner2 {
-        display: flex;
-        justify-content: space-between;
-      }
-      .inner2-1 {
-        width: 830px;
-      }
-      .inner2-2 {
-        width: 420px;
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8조</title>
 
-    <link rel="stylesheet" href="style/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="inner1">
-        <div class="one">은진</div>
-        <div class="two">연정</div>
-      </div>
-      <div class="inner2">
-        <div class="three inner2-1">지은</div>
-        <div class="inner2-2">
-          <div class="four">승무</div>
-          <div class="five">예진</div>
+  <style>
+    .container {
+      width: 1280px;
+      margin: auto;
+      border: 1px solid red;
+    }
+
+    .inner1 {
+      /* height: 260px; */
+    }
+
+    .inner2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .inner2-1 {
+      width: 830px;
+    }
+
+    .inner2-2 {
+      width: 420px;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="_eunjin.scss">
+</head>
+
+<body>
+  <div class="container">
+    <div class="inner1">
+      <header>
+        <div class="searchBox">
+          <form action="">
+            <h1>
+              <a href="https://www.naver.com/">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
+                </svg>
+              </a>
+            </h1>
+            <label for="search-input"></label>
+            <input id="search-input" type="text" placeholder="검색어를 입력하세요.">
+            <div class="searchBtn-group">
+              <button type="button" class="keyboard-btn"><span class=""></span></button>
+              <button type="button" class="recent-btn"><span class=""></span></button>
+              <button type="button" class="search-btn"><span></span></button>
+            </div>
+          </form>
         </div>
+      </header>
+      <div class="one">은진</div>
+      <div class="two">연정</div>
+    </div>
+    <div class="inner2">
+      <div class="three inner2-1">지은</div>
+      <div class="inner2-2">
+        <div class="four">승무</div>
+        <div class="five">예진</div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
