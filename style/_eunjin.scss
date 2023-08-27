@@ -10,6 +10,7 @@ h1 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .searchBox {
   border: 1px solid #03c75a;
   border-radius: 33px;
@@ -19,6 +20,8 @@ h1 {
     display: inline-flex;
     width: 98%;
 =======
+=======
+>>>>>>> 54e94bb (Feat: 검색창UI)
 header {
   margin-top: 64px;
 }
@@ -41,20 +44,41 @@ header {
     height: 100%;
     padding: 17px;
     margin-right: 12px;
+<<<<<<< HEAD
 >>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
+=======
+=======
+.searchBox {
+  border: 1px solid #03c75a;
+  border-radius: 33px;
+  width: 706px;
+
+  >form {
+    display: inline-flex;
+    width: 98%;
+>>>>>>> c641c90 (Feat: 검색창UI)
+>>>>>>> 54e94bb (Feat: 검색창UI)
 
     svg {
       display: inline-block;
       position: absolute;
 <<<<<<< HEAD
+<<<<<<< HEAD
       fill: #03c75a;
 =======
       fill: $color-mainLogo;
 >>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
+=======
+      fill: $color-mainLogo;
+=======
+      fill: #03c75a;
+>>>>>>> c641c90 (Feat: 검색창UI)
+>>>>>>> 54e94bb (Feat: 검색창UI)
       width: 24px;
       margin-right: 12px;
       padding-left: 10px;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     h1 {
@@ -65,12 +89,27 @@ header {
       margin-right: 12px;
     }
 =======
+=======
+>>>>>>> 54e94bb (Feat: 검색창UI)
   }
 
   form {
     display: inline-flex;
     width: 85%;
+<<<<<<< HEAD
 >>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
+=======
+=======
+
+    h1 {
+      display: inline-block;
+      width: 68px;
+      height: 100%;
+      padding: 17px;
+      margin-right: 12px;
+    }
+>>>>>>> c641c90 (Feat: 검색창UI)
+>>>>>>> 54e94bb (Feat: 검색창UI)
 
     input {
       width: 480px;
@@ -78,6 +117,7 @@ header {
       padding: 17px 0;
       border: none;
       outline: none;
+<<<<<<< HEAD
 <<<<<<< HEAD
       font-size: 1.25em;
       line-height: 24px;
@@ -87,6 +127,8 @@ header {
 
   .searchBtn-group {
 =======
+=======
+>>>>>>> 54e94bb (Feat: 검색창UI)
       font-size: 1.0em;
       line-height: 24px;
       font-weight: bold;
@@ -99,11 +141,24 @@ header {
   }
 
   .search__button--group {
+<<<<<<< HEAD
 >>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
+=======
+=======
+      font-size: 1.25em;
+      line-height: 24px;
+      font-weight: bold;
+    }
+  }
+
+  .searchBtn-group {
+>>>>>>> c641c90 (Feat: 검색창UI)
+>>>>>>> 54e94bb (Feat: 검색창UI)
     flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -122,6 +177,8 @@ header {
       width: 24px;
       height: 16px;
 =======
+=======
+>>>>>>> 54e94bb (Feat: 검색창UI)
 
     .keyboard-btn,
     .recent-btn,
@@ -136,11 +193,33 @@ header {
         background-size: 434px 422px;
         background-repeat: no-repeat;
       }
+<<<<<<< HEAD
 >>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
+=======
+=======
+  }
+
+  .keyboard-btn,
+  .recent-btn,
+  .search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: block;
+      background-size: 434px 422px;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 16px;
+>>>>>>> c641c90 (Feat: 검색창UI)
+>>>>>>> 54e94bb (Feat: 검색창UI)
     }
   }
 
   .keyboard-btn::before {
+<<<<<<< HEAD
 <<<<<<< HEAD
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
     background-position: -50px -270px;
@@ -161,6 +240,8 @@ header {
   }
 }
 =======
+=======
+>>>>>>> 54e94bb (Feat: 검색창UI)
     @include set-sprite(434px 422px, -50px -270px, 24px, 16px);
   }
 
@@ -180,4 +261,27 @@ header {
 // font-size 변경 
 // h1와 form 태그 분리
 // 웹 접근성을 위한 텍스트 숨김 처리 
+<<<<<<< HEAD
 >>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
+=======
+=======
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+    background-position: -50px -270px;
+  }
+
+  .recent-btn::before {
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+    background-position: -323px -174px;
+    width: 10px;
+    height: 6px;
+  }
+
+  .search-btn::before {
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+    background-position: -364px -213px;
+    width: 25px;
+    height: 25px;
+  }
+}
+>>>>>>> c641c90 (Feat: 검색창UI)
+>>>>>>> 54e94bb (Feat: 검색창UI)
