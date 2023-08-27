@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -189,6 +190,8 @@ button {
   font-family: "Gothic900";
   src: url("/fonts/AppleSDGothicNeoH.ttf") format("truetype");
 }
+=======
+>>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
 body {
   font-family: Gothic500, sans-serif;
   font-weight: 500;
@@ -209,6 +212,123 @@ body {
 
 .one {
   background-color: pink;
+}
+
+body,
+h1 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin-top: 64px;
+}
+
+.search {
+  border: 1px solid #19b75d;
+  border-radius: 33px;
+  width: 706px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.search:hover {
+  box-shadow: 0 4px 4px 0 #dedede;
+}
+
+.search .logo {
+  display: inline-block;
+  width: 68px;
+  height: 100%;
+  padding: 17px;
+  margin-right: 12px;
+}
+
+.search .logo svg {
+  display: inline-block;
+  position: absolute;
+  fill: #19b75d;
+  width: 24px;
+  margin-right: 12px;
+  padding-left: 10px;
+}
+
+.search form {
+  display: inline-flex;
+  width: 85%;
+}
+
+.search form input {
+  width: 480px;
+  height: 24px;
+  padding: 17px 0;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.search form input::-moz-placeholder {
+  color: #d7d7d7;
+  font-weight: 500;
+}
+
+.search form input::placeholder {
+  color: #d7d7d7;
+  font-weight: 500;
+}
+
+.search .search__button--group {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.search .search__button--group .keyboard-btn,
+.search .search__button--group .recent-btn,
+.search .search__button--group .search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search .search__button--group .keyboard-btn::before,
+.search .search__button--group .recent-btn::before,
+.search .search__button--group .search-btn::before {
+  content: "";
+  display: block;
+  background-size: 434px 422px;
+  background-repeat: no-repeat;
+}
+
+.search .keyboard-btn::before {
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -50px -270px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 16px;
+}
+
+.search .recent-btn::before {
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -323px -174px;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 6px;
+}
+
+.search .search-btn::before {
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -364px -213px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
 }
 
 .two {
@@ -540,6 +660,7 @@ button {
   background: orange;
 }
 
+<<<<<<< HEAD
 .a11y-hidden {
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
@@ -788,3 +909,6 @@ button {
   content: "|";
   padding: 20px;
 } /*# sourceMappingURL=style.css.map */
+=======
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)

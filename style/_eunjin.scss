@@ -9,6 +9,7 @@ h1 {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 .searchBox {
   border: 1px solid #03c75a;
   border-radius: 33px;
@@ -17,15 +18,44 @@ h1 {
   >form {
     display: inline-flex;
     width: 98%;
+=======
+header {
+  margin-top: 64px;
+}
+
+.search {
+  border: 1px solid $color-mainLogo;
+  border-radius: 33px;
+  width: 706px;
+  margin: 0 auto;
+  display: flex;
+
+  &:hover {
+    box-shadow: 0 4px 4px 0 #dedede;
+    ;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 68px;
+    height: 100%;
+    padding: 17px;
+    margin-right: 12px;
+>>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
 
     svg {
       display: inline-block;
       position: absolute;
+<<<<<<< HEAD
       fill: #03c75a;
+=======
+      fill: $color-mainLogo;
+>>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
       width: 24px;
       margin-right: 12px;
       padding-left: 10px;
     }
+<<<<<<< HEAD
 
     h1 {
       display: inline-block;
@@ -34,6 +64,13 @@ h1 {
       padding: 17px;
       margin-right: 12px;
     }
+=======
+  }
+
+  form {
+    display: inline-flex;
+    width: 85%;
+>>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
 
     input {
       width: 480px;
@@ -41,6 +78,7 @@ h1 {
       padding: 17px 0;
       border: none;
       outline: none;
+<<<<<<< HEAD
       font-size: 1.25em;
       line-height: 24px;
       font-weight: bold;
@@ -48,10 +86,25 @@ h1 {
   }
 
   .searchBtn-group {
+=======
+      font-size: 1.0em;
+      line-height: 24px;
+      font-weight: bold;
+
+      &::placeholder {
+        color: #d7d7d7;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .search__button--group {
+>>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
     flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
+<<<<<<< HEAD
   }
 
   .keyboard-btn,
@@ -68,10 +121,27 @@ h1 {
       background-repeat: no-repeat;
       width: 24px;
       height: 16px;
+=======
+
+    .keyboard-btn,
+    .recent-btn,
+    .search-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        display: block;
+        background-size: 434px 422px;
+        background-repeat: no-repeat;
+      }
+>>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
     }
   }
 
   .keyboard-btn::before {
+<<<<<<< HEAD
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
     background-position: -50px -270px;
   }
@@ -90,3 +160,24 @@ h1 {
     height: 25px;
   }
 }
+=======
+    @include set-sprite(434px 422px, -50px -270px, 24px, 16px);
+  }
+
+  .recent-btn::before {
+    @include set-sprite(434px 422px, -323px -174px, 10px, 6px);
+  }
+
+  .search-btn::before {
+    @include set-sprite(434px 422px, -364px -213px, 25px, 25px);
+  }
+}
+
+// mixin 적용
+// BEM 방식 클래스 정리
+// box-shadow 추가
+// color 변경
+// font-size 변경 
+// h1와 form 태그 분리
+// 웹 접근성을 위한 텍스트 숨김 처리 
+>>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
