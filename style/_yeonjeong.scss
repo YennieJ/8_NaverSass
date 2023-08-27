@@ -1,3 +1,234 @@
+@import "reset.css";
+
 .two {
   background: yellow;
 }
+
+.two {
+  margin: 20px;
+}
+
+#nav {
+  text-decoration: none;
+  text-align: center;
+  margin: 20 auto;
+}
+
+#nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+#nav li {
+  width: 64px;
+  margin-left: 4px;
+}
+
+#nav li:nth-of-type(1) {
+  margin-left: 0;
+}
+
+#nav a {
+  text-decoration-line: none;
+  text-align: center;
+}
+
+#nav a:visited {
+  color: black;
+}
+
+#nav a div {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+#nav a div span {
+  margin: 30px;
+}
+
+.service_item .blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+
+
+#nav .service_list .service_iconlink {
+  position: relative;
+  display: block;
+  width: 64px;
+}
+
+#nav .service_list .service_iconlink .service_icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+#nav .service_list .service_iconlink .service_name {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  margin-top: 7px;
+  line-height: 20px;
+  text-align: center;
+}
+
+
+#nav .service_list .service_item .service_icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: 0px -128px;
+  background-repeat: no-repeat;
+  width: 54px;
+  height: 54px;
+  background-size: 434px 422px;
+  background-position: 0px -128px;
+  background-repeat: no-repeat;
+  width: 54px;
+  height: 54px;
+}
+
+#nav .service_list .service_iconlink .service_icon:hover::after {
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  box-shadow: inset 0 2px -2px black;
+}
+
+#nav .service_list .service_iconlink .service_icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#nav .service_list .service_iconlink .service_icon.mail::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -250px -90px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.cafe::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -250px 0px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.blog::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -201px -98px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.shopping::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -90px -209px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.news::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: 0px -209px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.stock::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -180px -209px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.real::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -45px -209px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.map::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -201px 0px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.webtoon::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -225px -209px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+#nav .service_list .service_iconlink .service_icon.more::after {
+  background-image: url(/style/img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -250px -135px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+}
+
+
+/*  */
+/* #nav .service_list a .service_icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  width: 54px;
+  height: 54px;
+}
+
+#nav .service_list a .service_icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+} */
