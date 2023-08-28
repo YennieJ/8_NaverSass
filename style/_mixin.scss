@@ -1,0 +1,34 @@
+// font
+@mixin set-font(
+  $font-name,
+  $font-weight,
+  $color: $color-defaultText,
+  $font-size: 1.4rem,
+  $line-height: 1.7rem
+) {
+  font-family: $font-name, sans-serif;
+  font-weight: $font-weight;
+  color: $color;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-style: normal;
+}
+// flex
+@mixin set-flex($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// box-shadow
+@mixin box-shadow($args...) {
+  box-shadow: $args;
+}
+
+// border
+@mixin set-border($border, $border-radius, $box-shadow...) {
+  border: $border;
+  border-radius: $border-radius;
+  @include box-shadow($box-shadow);
+}
