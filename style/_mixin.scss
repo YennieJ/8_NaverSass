@@ -32,3 +32,13 @@
   border-radius: $border-radius;
   @include box-shadow($box-shadow);
 }
+
+// image-splite
+@mixin set-sprite($bg-size, $bg-position, $width, $height, $bg-image: sp_main) {
+  background-image: url("../images/" + $bg-image + ".png");
+  background-size: $bg-size;
+  background-position: $bg-position;
+  background-repeat: no-repeat;
+  width: $width;
+  height: $height;
+}
