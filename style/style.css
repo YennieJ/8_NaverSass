@@ -481,21 +481,24 @@ header {
 }
 
 .three {
-  border: 1px solid #aaa;
+  border: 1px solid #ebebeb;
   border-radius: 5px;
 }
 
 .news-company {
-  padding-top: 20px;
+  margin: 20px 10px 0 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
 }
 .news-company article {
+  flex-grow: 1;
   width: 200px;
   height: 50px;
   list-style: none;
-  border: 1px solid #aaa;
+  border: 1px solid #ebebeb;
   text-align: center;
 }
 .news-company article a {
@@ -505,7 +508,9 @@ header {
 
 .news-paging {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   padding: 10px;
 }
@@ -513,40 +518,51 @@ header {
   width: 120px;
   height: 30px;
   display: inline-block;
-  background-color: #08c75b;
+  background-color: #03c75a;
   border-radius: 2px;
   position: relative;
 }
 .news-paging .logo div {
-  width: 72px;
-  height: 15px;
-  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+  background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
   background-position: -120px -165px;
   background-repeat: no-repeat;
+  width: 72px;
+  height: 15px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: none;
 }
+.news-paging .logo:hover {
+  background-color: #17b75e;
+}
 .news-paging button {
   width: 30px;
   height: 30px;
-  border: 1px solid #aaa;
+  border: 1px solid #ebebeb;
   border-radius: 100%;
   background-color: transparent;
+  position: relative;
 }
-.news-paging button div {
-  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.89f0d213.png);
+.news-paging button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
-  background-position: -104px -388px;
+  background-position: -115px -389px;
   background-repeat: no-repeat;
   width: 10px;
-  height: 15px;
-  margin: auto;
+  height: 12px;
 }
-.news-paging .prev {
+.news-paging button.prev {
   rotate: 180deg;
 }
 
