@@ -1,61 +1,49 @@
-.four {
-  border: 1px solid #dadcdf;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
 .account {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include set-flex(column, stretch, stretch);
+  @include set-border(1px solid #dadcdf, 8px, 0);
+  @include set-font(gothic, 400, $color-defaultText, 16px, 20px);
   text-align: center;
-  padding: 20px;
-  p {
-    font-size: 16px;
-    margin: 0px;
-  }
-  .login {
+  background-color: $color-white;
+  padding: 21px 20px 18px;
+
+  .account__login {
+    @include set-font(gothic, 500, $color-white, 14px, 20px);
+    @include set-border(
+      1px solid rgba(0, 0, 0, 0.06),
+      5px,
+      0 2px 4px 0 rgba(3, 199, 90, 0.12)
+    );
     padding: 17px 0px;
-    background-color: #03c75a;
-    border-radius: 5px;
-    color: #fff;
+    background-color: $color-mainLogo;
     margin: 13px 0px;
-    font-size: 14px;
-    font-weight: bold;
     cursor: pointer;
 
     i {
-      background: url(../img/sp_main.89f0d213.png);
-      background-size: 434px 422px;
-      background-position: -120px -166px;
-      background-repeat: no-repeat;
+      @include set-sprite(434px 422px, -120px -166px, 72px, 14px, sp_main);
       display: inline-block;
-      width: 72px;
-      height: 15px;
-      margin: 2px 1px 0 0;
+      margin: 3px 8px 0 0;
       vertical-align: top;
     }
   }
-  .login:hover {
-    filter: brightness(0.95);
+  .account__login:hover {
+    background-color: $color-mainLogo-hover;
   }
-  .find {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  .account__find {
+    @include set-font(gothic, 400, $color-caption, 14px, underline);
+    margin: auto;
     cursor: pointer;
-    padding: 0px;
-    margin: 0px;
-    font-size: 14px;
-    color: #606060;
     li {
-      list-style: none;
+      display: inline-block;
     }
-    li:nth-child(1)::after,
-    li:nth-child(2)::after {
-      content: "|";
-      color: #d3d5d7;
-      margin: 0px 12px;
+
+    li:not(last-child)::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      background-color: #d3d5d7;
+      margin: 4px 12px 0;
+      vertical-align: top;
     }
 
     li:hover {
