@@ -546,6 +546,9 @@ header {
   background-color: transparent;
   position: relative;
 }
+.news-paging button:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
 .news-paging button::before {
   content: "";
   display: block;
@@ -562,7 +565,7 @@ header {
   width: 10px;
   height: 12px;
 }
-.news-paging button.prev {
+.news-paging button.prev::before {
   rotate: 180deg;
 }
 
