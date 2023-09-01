@@ -1,13 +1,13 @@
 .account {
   @include set-flex(column, stretch, stretch);
   @include set-border(1px solid #dadcdf, 8px, 0);
-  @include set-font(gothic, 400, $color-defaultText, 16px, 20px);
+  @include set-font("Gothic500", 400, $color-defaultText, 16px, 20px);
   text-align: center;
   background-color: $color-white;
   padding: 21px 20px 18px;
 
   .account__login {
-    @include set-font(gothic, 500, $color-white, 14px, 20px);
+    @include set-font("Gothic500", 500, $color-white, 14px, 20px);
     @include set-border(
       1px solid rgba(0, 0, 0, 0.06),
       5px,
@@ -21,7 +21,7 @@
     i {
       @include set-sprite(434px 422px, -120px -166px, 72px, 14px, sp_main);
       display: inline-block;
-      margin: 3px 8px 0 0;
+      margin: 1px 8px 0 0;
       vertical-align: top;
     }
   }
@@ -29,7 +29,7 @@
     background-color: $color-mainLogo-hover;
   }
   .account__find {
-    @include set-font(gothic, 400, $color-caption, 14px, underline);
+    @include set-font("Gothic500", 400, $color-caption, 14px, underline);
     margin: auto;
     cursor: pointer;
     li {
