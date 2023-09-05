@@ -28,14 +28,8 @@
     text-decoration-line: none;
     text-align: center;
 
-    div {
-      width: 44px;
-      height: 44px;
-      margin: 0 auto;
-
-      span {
-        margin: 30px;
-      }
+    div span{
+      margin: 30px;
     }
 
     &:visited {
@@ -44,7 +38,7 @@
   }
 }
 
-.service_item .blind {
+.serviceList__item .serviceList__name--blind {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -53,20 +47,20 @@
   overflow: hidden;
 }
 
-#nav .service_list .service_iconlink {
-  position: relative;
+#nav .serviceList .serviceList__link {
+  
   display: block;
   width: 64px;
 
-  .service_icon {
-    position: relative;
+  .serviceList__icon {
+    
     display: block;
     width: 48px;
-    height: 48px;
+    height: 50px;
     margin: 0 auto;
   }
 
-  .service_name {
+  .serviceList__name {
     overflow: hidden;
     white-space: nowrap;
     display: block;
@@ -76,26 +70,22 @@
   }
 }
 
-#nav .service_list .service_iconlink .service_icon {
+#nav .serviceList .serviceList__link .serviceList__icon {
   position: relative;
 
   &::before {
     content: "";
     display: block;
     position: absolute;
-    top: -2px;
-    left: -4px;
+    top: -1px;
+    left: -3px;
     @include set-sprite(434px 422px, 0px -128px, 54px, 54px);
   }
 
   &:hover::after {
-    border: 2px solid #ddd;
-    border-radius: 17px;
-    box-shadow: 0px 2px 4px -2px gray;
-    @include set-sprite(434px 422px, -142px 0px, 58px, 58px);
     position: absolute;
-    top: -3px;
-    left: 0px;
+    border-radius: 17px;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.12);
   }
 
   &::after {
@@ -110,25 +100,25 @@
   }
 }
 
-.more:hover::after {
+.serviceList__icon--more:hover::after {
   background-color: #ddd;
 }
 
 $icons: (
-  mail: (434px 422px, -250px -90px, 44px, 44px),
-  cafe: (434px 422px, -250px 0px, 44px, 44px),
-  blog: (434px 422px, -201px -98px, 44px, 44px),
-  shopping: (434px 422px, -90px -209px, 44px, 44px),
-  news: (434px 422px, 0px -209px, 44px, 44px),
-  stock: (434px 422px, -180px -209px, 44px, 44px),
-  real: (434px 422px, -45px -209px, 44px, 44px),
-  map: (434px 422px, -201px 0px, 44px, 44px),
-  webtoon: (434px 422px, -225px -209px, 44px, 44px),
-  more: (434px 422px, -250px -135px, 44px, 44px)
+  serviceList__icon--mail: (438px 429px, -250px -90px, 48px, 48px),
+  serviceList__icon--cafe: (438px 422px, -251px 2px, 48px, 48px),
+  serviceList__icon--blog: (438px 423px, -201px -95px, 48px, 48px),
+  serviceList__icon--shopping: (434px 422px, -88.5px -207px, 47px, 47px),
+  serviceList__icon--news: (434px 422px, 2px -206px, 48px, 48px),
+  serviceList__icon--stock: (434px 422px, -178px -206px, 48px, 48px),
+  serviceList__icon--real: (434px 422px, -44px -207px, 47px, 47px),
+  serviceList__icon--map: (434px 422px, -201px 2px, 48px, 48px),
+  serviceList__icon--webtoon: (434px 422px, -222px -206px, 48px, 48px),
+  serviceList__icon--more: (434px 422px, -248px -132px, 48px, 48px)
 );
 
 // '@each list data 반복문' 문법
-#nav .service_list .service_iconlink .service_icon {
+#nav .serviceList .serviceList__link .serviceList__icon {
 
   @each $icon,
   $properties in $icons {
