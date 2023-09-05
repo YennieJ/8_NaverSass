@@ -485,7 +485,7 @@ header {
   border-radius: 5px;
 }
 
-.news-company {
+.news__companies {
   margin: 20px 10px 0 10px;
   display: flex;
   flex-wrap: wrap;
@@ -493,7 +493,7 @@ header {
   border: 1px solid #ebebeb;
   border-radius: 5px;
 }
-.news-company article {
+.news__companies article {
   flex-grow: 1;
   width: 200px;
   height: 50px;
@@ -501,12 +501,12 @@ header {
   border: 1px solid #ebebeb;
   text-align: center;
 }
-.news-company article a {
+.news__companies article a {
   display: block;
   line-height: 50px;
 }
 
-.news-paging {
+.news__paging {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -514,7 +514,7 @@ header {
   gap: 10px;
   padding: 10px;
 }
-.news-paging .logo {
+.news__paging .logo {
   width: 120px;
   height: 30px;
   display: inline-block;
@@ -522,7 +522,7 @@ header {
   border-radius: 2px;
   position: relative;
 }
-.news-paging .logo div {
+.news__paging .logo .img-logo {
   background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
   background-position: -120px -165px;
@@ -535,10 +535,10 @@ header {
   transform: translate(-50%, -50%);
   border: none;
 }
-.news-paging .logo:hover {
+.news__paging .logo:hover {
   background-color: #17b75e;
 }
-.news-paging button {
+.news__paging button {
   width: 30px;
   height: 30px;
   border: 1px solid #ebebeb;
@@ -546,10 +546,10 @@ header {
   background-color: transparent;
   position: relative;
 }
-.news-paging button:hover {
+.news__paging button:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
 }
-.news-paging button::before {
+.news__paging button::before {
   content: "";
   display: block;
   position: absolute;
@@ -565,7 +565,7 @@ header {
   width: 10px;
   height: 12px;
 }
-.news-paging button.prev::before {
+.news__paging button.btn-prev::before {
   rotate: 180deg;
 }
 

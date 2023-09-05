@@ -2,7 +2,7 @@
   @include set-border(1px solid $color-border, 5px);
 }
 
-.news-company {
+.news__companies {
   margin: 20px 10px 0 10px;
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +24,7 @@
   }
 }
 
-.news-paging {
+.news__paging {
   @include set-flex(row, center, center);
   gap: 10px;
   padding: 10px;
@@ -37,7 +37,7 @@
     border-radius: 2px;
     position: relative;
 
-    div {
+    .img-logo {
       @include set-sprite(434px 422px, -120px -165px, 72px, 15px);
       position: absolute;
       top: 50%;
@@ -74,7 +74,7 @@
       @include set-sprite(434px 422px, -115px -389px, 10px, 12px);
     }
 
-    &.prev::before {
+    &.btn-prev::before {
       rotate: 180deg;
     }
   }
