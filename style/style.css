@@ -219,8 +219,249 @@ body {
   background: blue;
 }
 
-.four {
-  background: brown;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.widgetboard {
+  padding: 18px;
+  background-color: #f4f6fa;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+
+.widgetboard__title {
+  color: #080808;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.widgetboard__memo {
+  position: relative;
+  margin-top: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #ebebeb, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+
+.memo__header {
+  position: relative;
+  display: flex;
+  padding: 7px 9px;
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+  background-image: linear-gradient(to top, #00b869, #00c772);
+}
+.memo__header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4) 70%, transparent 30%);
+  background-size: 6px 1px;
+}
+.memo__header a {
+  padding-left: 10px;
+  flex-basis: 50%;
+  font-weight: 800;
+  line-height: 34px;
+}
+
+.memo__lock {
+  margin-left: auto;
+}
+.memo__lock button {
+  position: relative;
+  width: 38px;
+  height: 34px;
+}
+.memo__lock button i {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #00b266;
+}
+.memo__lock button i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  background-image: url(../img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -315px -368px;
+  background-repeat: no-repeat;
+}
+.memo__lock button .memo__tooltip {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  padding: 0 16px;
+  border: 1px solid #03c75a;
+  border-radius: 20px;
+  color: #101010;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 38px;
+  white-space: nowrap;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%);
+}
+.memo__lock button .memo__tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 38px;
+  width: 20px;
+  height: 11px;
+  background-image: url(../img/sp_main.89f0d213.png);
+  background-repeat: no-repeat;
+  background-size: 434px 422px;
+  background-position: -124px -154px;
+  transform: translateX(-50%) rotate(180deg);
+}
+.memo__lock button:hover i {
+  background-color: #009e5a;
+}
+.memo__lock button:hover .memo__tooltip {
+  display: block;
+}
+
+.memo__content {
+  padding: 0 0 4px;
+}
+.memo__content li:not(:first-child) {
+  border-top: 1px solid #ebebeb;
+}
+
+.memo__item {
+  padding: 0 18px;
+  line-height: 46px;
+}
+.memo__item a {
+  display: flex;
+  font-weight: 500;
+}
+.memo__item a .item__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.memo__item a .item__text:hover {
+  text-decoration: underline;
+}
+.memo__item a .item__text i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 15px 6px 0 0;
+  vertical-align: top;
+  background-image: url(../img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -416px -347px;
+  background-repeat: no-repeat;
+}
+.memo__item a .item__active i {
+  background-position: -416px -364px;
+}
+.memo__item a .item__date {
+  padding-left: 10px;
+  margin-left: auto;
+  color: #606060;
+}
+
+.memo__new {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #dadcdf;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+}
+.memo__new span {
+  display: none;
+}
+.memo__new::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/sp_main.89f0d213.png);
+  background-size: 434px 422px;
+  background-position: -350px -343px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+.memo__new:hover {
+  min-width: 116px;
+  width: auto;
+  height: 40px;
+  padding: 0 13px 0 16px;
+  border-radius: 20px;
+  border-color: #00c16e;
+  background-color: #00c16e;
+  box-sizing: border-box;
+}
+.memo__new:hover span {
+  display: inline-block;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 39px;
+  vertical-align: top;
+}
+.memo__new:hover::after {
+  position: static;
+  display: inline-block;
+  width: 12px;
+  height: 14px;
+  margin: 12px 0 0 7px;
+  background-position: -259px -316px;
 }
 
 .account {
