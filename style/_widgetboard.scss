@@ -1,45 +1,20 @@
-// Reset.css
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-}
-.blind {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
 // memo.css
 .widgetboard {
   padding: 18px;
-
   background-color: #f4f6fa;
-  border-radius: 8px;
-  box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+
+  @include set-border(
+    0,
+    8px,
+    0 0 0 1px #e3e5e8,
+    0 1px 2px 0 rgba(0, 0, 0, 0.04)
+  );
 }
 
 .widgetboard__title {
-  color: #080808;
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 24px;
+  color: $color-selectedTitle;
+
+  @include set-font(Gothic800, 800, $color-selectedTitle, 1.5rem, 24px);
 }
 
 .widgetboard__memo {
@@ -47,9 +22,14 @@ button {
 
   margin-top: 12px;
 
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 0 1px #ebebeb, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  background-color: $color-white;
+
+  @include set-border(
+    0,
+    8px,
+    0 0 0 1px $color-border,
+    0 1px 2px 0 rgba(0, 0, 0, 0.04)
+  );
 }
 
 .memo__header {
@@ -60,9 +40,6 @@ button {
   padding: 7px 9px;
 
   border-radius: 8px 8px 0 0;
-
-  color: #fff;
-  // font-size: 1.5rem;
 
   background-image: linear-gradient(to top, #00b869, #00c772);
 
@@ -90,12 +67,11 @@ button {
 
     flex-basis: 50%;
 
-    font-weight: 800;
-    line-height: 34px;
+    @include set-font(Gothic800, 800, $color-white, 1.5rem, 34px);
   }
 }
 
-.memo__lock {
+.memo__lock-button {
   margin-left: auto;
 
   button {
@@ -124,19 +100,16 @@ button {
         right: 0;
         bottom: 0;
 
+        margin: auto;
         width: 20px;
         height: 20px;
 
-        margin: auto;
-        background-image: url(../img/sp_main.89f0d213.png);
-        background-size: 434px 422px;
-        background-position: -315px -368px;
-        background-repeat: no-repeat;
+        @include set-sprite(434px 422px, -315px -368px, 20px, 20px);
       }
     }
 
     // tooltip
-    .memo__tooltip {
+    .memo__lock-button-tooltip {
       display: none;
 
       position: absolute;
@@ -145,18 +118,16 @@ button {
 
       padding: 0 16px;
 
-      border: 1px solid #03c75a;
-      border-radius: 20px;
-
-      color: #101010;
-      // font-size: 1.3rem;
-      font-size: 13px;
-      font-weight: 500;
-      line-height: 38px;
+      @include set-font(Gothic500, 500, $color-defaultText, 1.3rem, 38px);
       white-space: nowrap;
 
-      background-color: #fff;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+      background-color: $color-white;
+
+      @include set-border(
+        1px solid #03c75a,
+        20px,
+        0 2px 4px 0 rgba(0, 0, 0, 0.15)
+      );
 
       transform: translateX(-50%);
 
@@ -167,13 +138,7 @@ button {
         left: 50%;
         bottom: 38px;
 
-        width: 20px;
-        height: 11px;
-
-        background-image: url(../img/sp_main.89f0d213.png);
-        background-repeat: no-repeat;
-        background-size: 434px 422px;
-        background-position: -124px -154px;
+        @include set-sprite(434px 422px, -124px -154px, 20px, 11px);
 
         transform: translateX(-50%) rotate(180deg);
       }
@@ -183,7 +148,7 @@ button {
       i {
         background-color: #009e5a;
       }
-      .memo__tooltip {
+      .memo__lock-button-tooltip {
         display: block;
       }
     }
@@ -194,19 +159,17 @@ button {
   padding: 0 0 4px;
 
   li:not(:first-child) {
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid $color-border;
   }
 }
 
 .memo__item {
   padding: 0 18px;
 
-  // font-size: 1.4rem;
-  line-height: 46px;
+  @include set-font(Gothic500, 500, $color-defaultText, 1.4rem, 46px);
 
   a {
     display: flex;
-    font-weight: 500;
 
     .item__text {
       overflow: hidden;
@@ -221,21 +184,15 @@ button {
       i {
         display: inline-block;
 
-        width: 16px;
-        height: 16px;
-
         margin: 15px 6px 0 0;
 
         vertical-align: top;
 
-        background-image: url(../img/sp_main.89f0d213.png);
-        background-size: 434px 422px;
-        background-position: -416px -347px;
-        background-repeat: no-repeat;
+        @include set-sprite(434px 422px, -416px -347px, 16px, 16px);
       }
     }
     // star icon active
-    .item__active {
+    .item--active {
       i {
         background-position: -416px -364px;
       }
@@ -245,7 +202,7 @@ button {
       padding-left: 10px;
       margin-left: auto;
 
-      color: #606060;
+      color: $color-caption;
     }
   }
 }
@@ -258,13 +215,9 @@ button {
   width: 38px;
   height: 38px;
 
-  border: 1px solid #dadcdf;
-  border-radius: 50%;
+  background-color: $color-white;
 
-  background-color: #fff;
-
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  text-decoration: none;
+  @include set-border(1px solid #dadcdf, 50%, 0 1px 2px 0 rgba(0, 0, 0, 0.06));
 
   // aria-hidden="true" 설정해서 none 괜찮음
   // 이러면 JS 사용을 안해도 되겠다.
@@ -281,13 +234,8 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(../img/sp_main.89f0d213.png);
-    background-size: 434px 422px;
-    background-position: -350px -343px;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
     margin: auto;
+    @include set-sprite(434px 422px, -350px -343px, 24px, 24px);
   }
 
   &:hover {
@@ -296,20 +244,14 @@ button {
     height: 40px;
     padding: 0 13px 0 16px;
 
-    border-radius: 20px;
-    border-color: #00c16e;
-
     background-color: #00c16e;
 
-    box-sizing: border-box;
+    @include set-border(1px solid #00c16e, 20px);
 
     span {
       display: inline-block;
 
-      color: #fff;
-      font-size: 15px;
-      font-weight: bold;
-      line-height: 39px;
+      @include set-font(Gothic600, 600, $color-white, 1.3rem, 39px);
 
       vertical-align: top;
     }
