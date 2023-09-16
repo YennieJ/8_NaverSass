@@ -1,23 +1,8 @@
 body {
-
   @include set-font(Gothic500, 500);
 
-
   @include set-font(Noto400, 400);
-
 }
-
-.blind {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
-@include set-font(Noto400, 400);
-
 
 .blind {
   position: absolute;

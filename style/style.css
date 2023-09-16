@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -143,6 +143,8 @@ a {
 input {
   box-sizing: border-box;
   margin: 0;
+  border: none;
+  outline: none;
 }
 
 button {
@@ -190,11 +192,15 @@ button {
   font-family: "Gothic900";
   src: url("/fonts/AppleSDGothicNeoH.ttf") format("truetype");
 }
-=======
->>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
 body {
   font-family: Gothic500, sans-serif;
   font-weight: 500;
+  color: #101010;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-style: normal;
+  font-family: Noto400, sans-serif;
+  font-weight: 400;
   color: #101010;
   font-size: 1.4rem;
   line-height: 1.7rem;
@@ -210,33 +216,20 @@ body {
   margin: -1px;
 }
 
-.one {
-  background-color: pink;
-}
-
-body,
-h1 {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 header {
   margin-top: 64px;
 }
 
 .search {
-  border: 1px solid #19b75d;
+  border: 1px solid #03c75a;
   border-radius: 33px;
   width: 706px;
   margin: 0 auto;
   display: flex;
 }
-
 .search:hover {
   box-shadow: 0 4px 4px 0 #dedede;
 }
-
 .search .logo {
   display: inline-block;
   width: 68px;
@@ -244,66 +237,53 @@ header {
   padding: 17px;
   margin-right: 12px;
 }
-
 .search .logo svg {
   display: inline-block;
   position: absolute;
-  fill: #19b75d;
+  fill: #03c75a;
   width: 24px;
   margin-right: 12px;
   padding-left: 10px;
 }
-
+.search .logo h1 {
+  display: inline-block;
+  width: 68px;
+  height: 100%;
+  padding: 17px;
+  margin-right: 12px;
+}
 .search form {
   display: inline-flex;
   width: 85%;
 }
-
 .search form input {
   width: 480px;
   height: 24px;
   padding: 17px 0;
-  border: none;
-  outline: none;
   font-size: 1em;
   line-height: 24px;
   font-weight: bold;
 }
-
 .search form input::-moz-placeholder {
   color: #d7d7d7;
   font-weight: 500;
 }
-
 .search form input::placeholder {
   color: #d7d7d7;
   font-weight: 500;
 }
-
 .search .search__button--group {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
 }
-
-.search .search__button--group .keyboard-btn,
-.search .search__button--group .recent-btn,
-.search .search__button--group .search-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .search .search__button--group .keyboard-btn::before,
 .search .search__button--group .recent-btn::before,
 .search .search__button--group .search-btn::before {
   content: "";
   display: block;
-  background-size: 434px 422px;
-  background-repeat: no-repeat;
 }
-
 .search .keyboard-btn::before {
   background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
@@ -312,7 +292,6 @@ header {
   width: 24px;
   height: 16px;
 }
-
 .search .recent-btn::before {
   background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
@@ -321,7 +300,6 @@ header {
   width: 10px;
   height: 6px;
 }
-
 .search .search-btn::before {
   background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
@@ -339,53 +317,29 @@ header {
   background: blue;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-}
-
-.blind {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
 .widgetboard {
   padding: 18px;
   background-color: #f4f6fa;
+  border: 0;
   border-radius: 8px;
   box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
 }
 
 .widgetboard__title {
   color: #080808;
-  font-size: 1.5rem;
+  font-family: Gothic800, sans-serif;
   font-weight: 800;
+  color: #080808;
+  font-size: 1.5rem;
   line-height: 24px;
+  font-style: normal;
 }
 
 .widgetboard__memo {
   position: relative;
   margin-top: 12px;
-  background-color: #fff;
+  background-color: #ffffff;
+  border: 0;
   border-radius: 8px;
   box-shadow: 0 0 0 1px #ebebeb, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
 }
@@ -395,7 +349,6 @@ button {
   display: flex;
   padding: 7px 9px;
   border-radius: 8px 8px 0 0;
-  color: #fff;
   background-image: linear-gradient(to top, #00b869, #00c772);
 }
 .memo__header::after {
@@ -411,19 +364,23 @@ button {
 .memo__header a {
   padding-left: 10px;
   flex-basis: 50%;
+  font-family: Gothic800, sans-serif;
   font-weight: 800;
+  color: #ffffff;
+  font-size: 1.5rem;
   line-height: 34px;
+  font-style: normal;
 }
 
-.memo__lock {
+.memo__lock-button {
   margin-left: auto;
 }
-.memo__lock button {
+.memo__lock-button button {
   position: relative;
   width: 38px;
   height: 34px;
 }
-.memo__lock button i {
+.memo__lock-button button i {
   position: relative;
   display: inline-block;
   width: 28px;
@@ -431,55 +388,59 @@ button {
   border-radius: 50%;
   background-color: #00b266;
 }
-.memo__lock button i::before {
+.memo__lock-button button i::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  margin: auto;
   width: 20px;
   height: 20px;
-  margin: auto;
-  background-image: url(../img/sp_main.89f0d213.png);
+  background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
   background-position: -315px -368px;
   background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
-.memo__lock button .memo__tooltip {
+.memo__lock-button button .memo__lock-button-tooltip {
   display: none;
   position: absolute;
   top: 38px;
   left: 50%;
   padding: 0 16px;
+  font-family: Gothic500, sans-serif;
+  font-weight: 500;
+  color: #101010;
+  font-size: 1.3rem;
+  line-height: 38px;
+  font-style: normal;
+  white-space: nowrap;
+  background-color: #ffffff;
   border: 1px solid #03c75a;
   border-radius: 20px;
-  color: #101010;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 38px;
-  white-space: nowrap;
-  background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   transform: translateX(-50%);
 }
-.memo__lock button .memo__tooltip::after {
+.memo__lock-button button .memo__lock-button-tooltip::after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 38px;
-  width: 20px;
-  height: 11px;
-  background-image: url(../img/sp_main.89f0d213.png);
-  background-repeat: no-repeat;
+  background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
   background-position: -124px -154px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 11px;
   transform: translateX(-50%) rotate(180deg);
 }
-.memo__lock button:hover i {
+.memo__lock-button button:hover i {
   background-color: #009e5a;
 }
-.memo__lock button:hover .memo__tooltip {
+.memo__lock-button button:hover .memo__lock-button-tooltip {
   display: block;
 }
 
@@ -492,11 +453,15 @@ button {
 
 .memo__item {
   padding: 0 18px;
+  font-family: Gothic500, sans-serif;
+  font-weight: 500;
+  color: #101010;
+  font-size: 1.4rem;
   line-height: 46px;
+  font-style: normal;
 }
 .memo__item a {
   display: flex;
-  font-weight: 500;
 }
 .memo__item a .item__text {
   overflow: hidden;
@@ -508,16 +473,16 @@ button {
 }
 .memo__item a .item__text i {
   display: inline-block;
-  width: 16px;
-  height: 16px;
   margin: 15px 6px 0 0;
   vertical-align: top;
-  background-image: url(../img/sp_main.89f0d213.png);
+  background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
   background-position: -416px -347px;
   background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
 }
-.memo__item a .item__active i {
+.memo__item a .item--active i {
   background-position: -416px -364px;
 }
 .memo__item a .item__date {
@@ -532,11 +497,10 @@ button {
   bottom: 12px;
   width: 38px;
   height: 38px;
+  background-color: #ffffff;
   border: 1px solid #dadcdf;
   border-radius: 50%;
-  background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  text-decoration: none;
 }
 .memo__new span {
   display: none;
@@ -549,30 +513,31 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../img/sp_main.89f0d213.png);
+  margin: auto;
+  background-image: url("../images/sp_main.png");
   background-size: 434px 422px;
   background-position: -350px -343px;
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
-  margin: auto;
 }
 .memo__new:hover {
   min-width: 116px;
   width: auto;
   height: 40px;
   padding: 0 13px 0 16px;
-  border-radius: 20px;
-  border-color: #00c16e;
   background-color: #00c16e;
-  box-sizing: border-box;
+  border: 1px solid #00c16e;
+  border-radius: 20px;
 }
 .memo__new:hover span {
   display: inline-block;
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
+  font-family: Gothic600, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.3rem;
   line-height: 39px;
+  font-style: normal;
   vertical-align: top;
 }
 .memo__new:hover::after {
@@ -655,22 +620,6 @@ button {
 }
 .account .account__find li:hover {
   text-decoration: underline;
-} /*# sourceMappingURL=style.css.map */
-.five {
-  background: orange;
-}
-
-<<<<<<< HEAD
-.a11y-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
 }
 
 /* fonts */
@@ -750,6 +699,16 @@ button {
   height: 50px;
   padding-left: 15px;
 }
+.login-wrap .login-form ::-moz-placeholder {
+  font-family: 16px, sans-serif;
+  font-weight: normal;
+  color: 400;
+  font-size: normal;
+  line-height: 1.7rem;
+  font-style: normal;
+  color: #767676;
+  cursor: pointer;
+}
 .login-wrap .login-form ::placeholder {
   font-family: 16px, sans-serif;
   font-weight: normal;
@@ -759,6 +718,9 @@ button {
   font-style: normal;
   color: #767676;
   cursor: pointer;
+}
+.login-wrap .login-form input:focus::-moz-placeholder {
+  color: transparent;
 }
 .login-wrap .login-form input:focus::placeholder {
   color: transparent;
@@ -771,7 +733,10 @@ button {
   width: 180%;
   padding: 15px 0px;
 }
-.login-wrap .login-form .login-checkbox[type="checkbox"] + label::before {
+.login-wrap .login-form .checkbox-toggle-wrap__login-checkbox + label {
+  cursor: pointer;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__login-checkbox + label::before {
   content: "";
   background-image: url("../images/sp_main.png");
   background-size: 266px 228px;
@@ -784,45 +749,39 @@ button {
   margin-right: 3px;
   vertical-align: bottom;
 }
-.login-wrap
-  .login-form
-  .login-checkbox[type="checkbox"]:checked
-  + label::before {
-  background-image: url("/image/checked-box-checked.svg");
+.login-wrap .login-form .checkbox-toggle-wrap__login-checkbox:checked + label::before {
+  background-position: -244px -166px;
+  background-size: 266px 228px;
 }
-.login-wrap .login-form .checkbox-text {
-  white-space: nowrap;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  overflow: hidden;
+.login-wrap .login-form .checkbox-toggle-wrap__checkbox-text {
+  font-family: "Noto400", sans-serif;
+  font-weight: 500;
+  color: #777;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  display: inline-block;
 }
 .login-wrap .login-form .checkbox-toggle-wrap__toggle-area {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-.login-wrap .login-form .toggle-button[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.login-wrap .login-form .toggle-button[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  border: max(2px, 0.1em) solid transparent;
-  background-color: #cac5c5;
-  border-radius: 1.25em;
-  width: 2.25em;
-  height: 1.25em;
-}
-.login-wrap .login-form .toggle-button[type="checkbox"]:enabled:hover {
   cursor: pointer;
 }
-.login-wrap .login-form .toggle-button[type="checkbox"]::before {
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  border: max(2px, 0.1em) solid transparent;
+  border-radius: 1.25em;
+  background-color: #cac5c5;
+  width: 2.25em;
+  height: 1.25em;
+  cursor: pointer;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-button::before {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -832,24 +791,14 @@ button {
   transform: scale(0.97);
   transition: left 50ms linear;
 }
-.login-wrap .login-form .toggle-button[type="checkbox"]:checked::before {
-  background-color: white;
-  left: 1em;
-}
-.login-wrap .login-form .toggle-button[type="checkbox"]:checked {
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-button:checked {
   background-color: rgb(3, 199, 90);
   border-color: rgb(3, 199, 90);
 }
-.login-wrap .login-form .toggle-button[type="checkbox"]::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  transform: scale(0.8);
-  background-color: #fff;
-  transition: left 120ms linear;
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-button:checked::before {
+  background-color: white;
+  left: 1em;
+  transform: scale(0.97);
 }
 .login-wrap .checkbox-toggle-wrap__toggle-text {
   font-family: "Noto400", sans-serif;
@@ -862,7 +811,9 @@ button {
 .login-wrap .checkbox-toggle-wrap__checkbox-text,
 .login-wrap .checkbox-toggle-wrap__toggle-text {
   white-space: nowrap;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   overflow: hidden;
 }
 
@@ -882,7 +833,6 @@ button {
   margin-top: 30px;
   height: 50px;
   background: rgb(3, 199, 90);
-  color: #fff;
   cursor: pointer;
 }
 
@@ -903,12 +853,5 @@ button {
 }
 .find-wrap__find-inner-wrap li:not(:first-child)::before {
   content: "|";
-  padding: 20px;
-}
-.find-inner-wrap .sign-up::before {
-  content: "|";
-  padding: 20px;
-} /*# sourceMappingURL=style.css.map */
-=======
-/*# sourceMappingURL=style.css.map */
->>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
+  padding: 12px;
+}/*# sourceMappingURL=style.css.map */

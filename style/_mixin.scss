@@ -1,9 +1,11 @@
 // font
-@mixin set-font($font-name,
+@mixin set-font(
+  $font-name,
   $font-weight,
   $color: $color-defaultText,
   $font-size: 1.4rem,
-  $line-height: 1.7rem) {
+  $line-height: 1.7rem
+) {
   font-family: $font-name, sans-serif;
   font-weight: $font-weight;
   color: $color;
@@ -40,8 +42,4 @@
   background-repeat: no-repeat;
   width: $width;
   height: $height;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0849c58 (Design: 태그 정리, 텍스트 숨김 처리, css 수정)
