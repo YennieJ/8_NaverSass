@@ -1,3 +1,53 @@
-.five {
-  background: orange;
+.account {
+  @include set-flex(column, stretch, stretch);
+  @include set-border(1px solid #dadcdf, 8px, 0);
+  @include set-font("Gothic500", 400, $color-defaultText, 16px, 20px);
+  text-align: center;
+  background-color: $color-white;
+  padding: 21px 20px 18px;
+
+  .account__login {
+    @include set-font("Gothic500", 500, $color-white, 14px, 20px);
+    @include set-border(
+      1px solid rgba(0, 0, 0, 0.06),
+      5px,
+      0 2px 4px 0 rgba(3, 199, 90, 0.12)
+    );
+    padding: 17px 0px;
+    background-color: $color-mainLogo;
+    margin: 13px 0px;
+    cursor: pointer;
+
+    i {
+      @include set-sprite(434px 422px, -120px -166px, 72px, 14px, sp_main);
+      display: inline-block;
+      margin: 1px 8px 0 0;
+      vertical-align: top;
+    }
+  }
+  .account__login:hover {
+    background-color: $color-mainLogo-hover;
+  }
+  .account__find {
+    @include set-font("Gothic500", 400, $color-caption, 14px, underline);
+    margin: auto;
+    cursor: pointer;
+    li {
+      display: inline-block;
+    }
+
+    li:not(last-child)::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      background-color: #d3d5d7;
+      margin: 4px 12px 0;
+      vertical-align: top;
+    }
+
+    li:hover {
+      text-decoration: underline;
+    }
+  }
 }

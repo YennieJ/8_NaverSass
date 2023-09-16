@@ -1,4 +1,6 @@
 body {
+  @include set-font(Gothic500, 500);
+
   @include set-font(Noto400, 400);
 }
 

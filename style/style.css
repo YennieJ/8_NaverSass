@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -142,6 +143,8 @@ a {
 input {
   box-sizing: border-box;
   margin: 0;
+  border: none;
+  outline: none;
 }
 
 button {
@@ -154,42 +157,48 @@ button {
 }
 
 @font-face {
-  font-family: "Noto100";
-  src: url("/fonts/NotoSansKR-Thin.ttf") format("truetype");
+  font-family: "Gothic100";
+  src: url("/fonts/AppleSDGothicNeoT.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Noto200";
-  src: url("/fonts/NotoSansKR-ExtraLight.ttf") format("truetype");
+  font-family: "Gothic200";
+  src: url("/fonts/AppleSDGothicNeoUL.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Noto300";
-  src: url("/fonts/NotoSansKR-Light.ttf") format("truetype");
+  font-family: "Gothic300";
+  src: url("/fonts/AppleSDGothicNeoL.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Noto400";
-  src: url("/fonts/NotoSansKR-Regular.ttf") format("truetype");
+  font-family: "Gothic400";
+  src: url("/fonts/AppleSDGothicNeoR.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Noto500";
-  src: url("/fonts/NotoSansKR-Medium.ttf") format("truetype");
+  font-family: "Gothic500";
+  src: url("/fonts/AppleSDGothicNeoM.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Noto600";
-  src: url("/fonts/NotoSansKR-SemiBold.ttf") format("truetype");
+  font-family: "Gothic600";
+  src: url("/fonts/AppleSDGothicNeoSB.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Noto700";
-  src: url("/fonts/NotoSansKR-Bold.ttf") format("truetype");
+  font-family: "Gothic700";
+  src: url("/fonts/AppleSDGothicNeoB.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Noto800";
-  src: url("/fonts/NotoSansKR-ExtraBold.ttf") format("truetype");
+  font-family: "Gothic800";
+  src: url("/fonts/AppleSDGothicNeoEB.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Noto900";
-  src: url("/fonts/NotoSansKR-Black.ttf") format("truetype");
+  font-family: "Gothic900";
+  src: url("/fonts/AppleSDGothicNeoH.ttf") format("truetype");
 }
 body {
+  font-family: Gothic500, sans-serif;
+  font-weight: 500;
+  color: #101010;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-style: normal;
   font-family: Noto400, sans-serif;
   font-weight: 400;
   color: #101010;
@@ -207,8 +216,91 @@ body {
   margin: -1px;
 }
 
-.one {
-  background-color: pink;
+header {
+  margin-top: 64px;
+}
+
+.search {
+  border: 1px solid #03c75a;
+  border-radius: 33px;
+  width: 706px;
+  margin: 0 auto;
+  display: flex;
+}
+.search:hover {
+  box-shadow: 0 4px 4px 0 #dedede;
+}
+.search .search-logo {
+  display: inline-block;
+  width: 68px;
+  height: 100%;
+  padding: 17px 17px 15px;
+  margin-right: 12px;
+}
+.search .search-logo svg {
+  display: inline-block;
+  fill: #03c75a;
+  width: 24px;
+  margin-right: 12px;
+  padding-left: 10px;
+}
+.search form {
+  display: inline-flex;
+  width: 87%;
+  align-items: center;
+}
+.search form input {
+  width: 480px;
+  height: 24px;
+  padding: 17px 0;
+  font-size: 1em;
+  line-height: 24px;
+  font-weight: bold;
+}
+.search form input::-moz-placeholder {
+  color: #d7d7d7;
+  font-weight: 500;
+}
+.search form input::placeholder {
+  color: #d7d7d7;
+  font-weight: 500;
+}
+.search .search__button--group {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+.search .search__button--group .keyboard-btn::before,
+.search .search__button--group .recent-btn::before,
+.search .search__button--group .search-btn::before {
+  content: "";
+  display: block;
+  margin-right: 14px;
+}
+.search .keyboard-btn::before {
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -50px -270px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 16px;
+}
+.search .recent-btn::before {
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -323px -174px;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 6px;
+}
+.search .search-btn::before {
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -364px -213px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
 }
 
 .two {
@@ -219,10 +311,541 @@ body {
   background: blue;
 }
 
-.four {
-  background: brown;
+.widgetboard {
+  padding: 18px;
+  background-color: #f4f6fa;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
 }
 
-.five {
-  background: orange;
+.widgetboard__title {
+  color: #080808;
+  font-family: Gothic800, sans-serif;
+  font-weight: 800;
+  color: #080808;
+  font-size: 1.5rem;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.widgetboard__memo {
+  position: relative;
+  margin-top: 12px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #ebebeb, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+
+.memo__header {
+  position: relative;
+  display: flex;
+  padding: 7px 9px;
+  border-radius: 8px 8px 0 0;
+  background-image: linear-gradient(to top, #00b869, #00c772);
+}
+.memo__header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4) 70%, transparent 30%);
+  background-size: 6px 1px;
+}
+.memo__header a {
+  padding-left: 10px;
+  flex-basis: 50%;
+  font-family: Gothic800, sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 34px;
+  font-style: normal;
+}
+
+.memo__lock-button {
+  margin-left: auto;
+}
+.memo__lock-button button {
+  position: relative;
+  width: 38px;
+  height: 34px;
+}
+.memo__lock-button button i {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #00b266;
+}
+.memo__lock-button button i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -315px -368px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.memo__lock-button button .memo__lock-button-tooltip {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  padding: 0 16px;
+  font-family: Gothic500, sans-serif;
+  font-weight: 500;
+  color: #101010;
+  font-size: 1.3rem;
+  line-height: 38px;
+  font-style: normal;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border: 1px solid #03c75a;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%);
+}
+.memo__lock-button button .memo__lock-button-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 38px;
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -124px -154px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 11px;
+  transform: translateX(-50%) rotate(180deg);
+}
+.memo__lock-button button:hover i {
+  background-color: #009e5a;
+}
+.memo__lock-button button:hover .memo__lock-button-tooltip {
+  display: block;
+}
+
+.memo__content {
+  padding: 0 0 4px;
+}
+.memo__content li:not(:first-child) {
+  border-top: 1px solid #ebebeb;
+}
+
+.memo__item {
+  padding: 0 18px;
+  font-family: Gothic500, sans-serif;
+  font-weight: 500;
+  color: #101010;
+  font-size: 1.4rem;
+  line-height: 46px;
+  font-style: normal;
+}
+.memo__item a {
+  display: flex;
+}
+.memo__item a .item__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.memo__item a .item__text:hover {
+  text-decoration: underline;
+}
+.memo__item a .item__text i {
+  display: inline-block;
+  margin: 15px 6px 0 0;
+  vertical-align: top;
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -416px -347px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.memo__item a .item--active i {
+  background-position: -416px -364px;
+}
+.memo__item a .item__date {
+  padding-left: 10px;
+  margin-left: auto;
+  color: #606060;
+}
+
+.memo__new {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 38px;
+  height: 38px;
+  background-color: #ffffff;
+  border: 1px solid #dadcdf;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.memo__new span {
+  display: none;
+}
+.memo__new::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -350px -343px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+.memo__new:hover {
+  min-width: 116px;
+  width: auto;
+  height: 40px;
+  padding: 0 13px 0 16px;
+  background-color: #00c16e;
+  border: 1px solid #00c16e;
+  border-radius: 20px;
+}
+.memo__new:hover span {
+  display: inline-block;
+  font-family: Gothic600, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.3rem;
+  line-height: 39px;
+  font-style: normal;
+  vertical-align: top;
+}
+.memo__new:hover::after {
+  position: static;
+  display: inline-block;
+  width: 12px;
+  height: 14px;
+  margin: 12px 0 0 7px;
+  background-position: -259px -316px;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  border: 1px solid #dadcdf;
+  border-radius: 8px;
+  box-shadow: 0;
+  font-family: "Gothic500", sans-serif;
+  font-weight: 400;
+  color: #101010;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 21px 20px 18px;
+}
+.account .account__login {
+  font-family: "Gothic500", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(3, 199, 90, 0.12);
+  padding: 17px 0px;
+  background-color: #03c75a;
+  margin: 13px 0px;
+  cursor: pointer;
+}
+.account .account__login i {
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -120px -166px;
+  background-repeat: no-repeat;
+  width: 72px;
+  height: 14px;
+  display: inline-block;
+  margin: 1px 8px 0 0;
+  vertical-align: top;
+}
+.account .account__login:hover {
+  background-color: #17b75e;
+}
+.account .account__find {
+  font-family: "Gothic500", sans-serif;
+  font-weight: 400;
+  color: #606060;
+  font-size: 14px;
+  line-height: underline;
+  font-style: normal;
+  margin: auto;
+  cursor: pointer;
+}
+.account .account__find li {
+  display: inline-block;
+}
+.account .account__find li:not(last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: #d3d5d7;
+  margin: 4px 12px 0;
+  vertical-align: top;
+}
+.account .account__find li:hover {
+  text-decoration: underline;
+}
+
+/* fonts */
+@font-face {
+  font-family: "SDGothic";
+  src: url("/font/AppleSDGothicNeoR.ttf") format("truetype");
+  font-weight: normal;
+}
+.logo {
+  background-image: url("../images/sp_main.png");
+  background-position: -315px -95px;
+  background-repeat: no-repeat;
+  width: 138px;
+  height: 66px;
+  background-image: url(/images/sp_logo.png);
+  display: inline-block;
+  margin-top: 8px;
+  vertical-align: top;
+}
+
+.header-wrap {
+  margin-top: 108px;
+  text-align: center;
+}
+
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(173, 164, 164);
+  border-radius: 5px;
+  box-shadow: border-box;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  /* 변경되는 UI적용 후 padding값 조절하여 클릭범위 넓히기 */
+  /* 체크박스 및 토글버튼 선택시 라벨 하이라이트 방지 */
+}
+.login-wrap .login-wrap__menu-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.login-wrap .login-wrap__menu-wrap a {
+  display: block;
+  padding: 20px 0px 40px 0px;
+}
+.login-wrap .login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+.login-wrap .login-form .login-form__id-pw-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-wrap .login-form .login-form__input-id {
+  border: 1px solid rgb(172, 165, 165);
+  border-radius: 5px;
+  box-shadow: border-box;
+  width: 240%;
+  height: 50px;
+  padding-left: 15px;
+}
+.login-wrap .login-form .login-form__input-pw {
+  border: 1px solid rgb(172, 165, 165);
+  border-radius: 5px;
+  box-shadow: border-box;
+  width: 240%;
+  height: 50px;
+  padding-left: 15px;
+}
+.login-wrap .login-form ::-moz-placeholder {
+  font-family: 16px, sans-serif;
+  font-weight: normal;
+  color: 400;
+  font-size: normal;
+  line-height: 1.7rem;
+  font-style: normal;
+  color: #767676;
+  cursor: pointer;
+}
+.login-wrap .login-form ::placeholder {
+  font-family: 16px, sans-serif;
+  font-weight: normal;
+  color: 400;
+  font-size: normal;
+  line-height: 1.7rem;
+  font-style: normal;
+  color: #767676;
+  cursor: pointer;
+}
+.login-wrap .login-form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.login-wrap .login-form input:focus::placeholder {
+  color: transparent;
+}
+.login-wrap .login-form .checkbox-toggle-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 180%;
+  padding: 15px 0px;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__login-checkbox + label {
+  cursor: pointer;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__login-checkbox + label::before {
+  content: "";
+  background-image: url("../images/sp_main.png");
+  background-size: 266px 228px;
+  background-position: -244px -85px;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background-image: url("/images/sp_login.png");
+  margin-right: 3px;
+  vertical-align: bottom;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__login-checkbox:checked + label::before {
+  background-position: -244px -166px;
+  background-size: 266px 228px;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__checkbox-text {
+  font-family: "Noto400", sans-serif;
+  font-weight: 500;
+  color: #777;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  display: inline-block;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  border: max(2px, 0.1em) solid transparent;
+  border-radius: 1.25em;
+  background-color: #cac5c5;
+  width: 2.25em;
+  height: 1.25em;
+  cursor: pointer;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-button::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 1em;
+  height: 1em;
+  transform: scale(0.97);
+  transition: left 50ms linear;
+}
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-button:checked {
+  background-color: rgb(3, 199, 90);
+  border-color: rgb(3, 199, 90);
+}
+.login-wrap .login-form .checkbox-toggle-wrap__toggle-button:checked::before {
+  background-color: white;
+  left: 1em;
+  transform: scale(0.97);
+}
+.login-wrap .checkbox-toggle-wrap__toggle-text {
+  font-family: "Noto400", sans-serif;
+  font-weight: 500;
+  color: #777;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+}
+.login-wrap .checkbox-toggle-wrap__checkbox-text,
+.login-wrap .checkbox-toggle-wrap__toggle-text {
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+
+/* 로그인 버튼 */
+.login-button {
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  box-shadow: border-box;
+  font-family: "Noto700", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  font-style: normal;
+  display: inline-block;
+  width: 140%;
+  margin-top: 30px;
+  height: 50px;
+  background: rgb(3, 199, 90);
+  cursor: pointer;
+}
+
+.find-wrap__find-inner-wrap {
+  font-family: "Noto400", sans-serif;
+  font-weight: 40px;
+  color: #888;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+}
+.find-wrap__find-inner-wrap li:not(:first-child)::before {
+  content: "|";
+  padding: 12px;
 }/*# sourceMappingURL=style.css.map */
