@@ -1,0 +1,84 @@
+header {
+  margin-top: 64px;
+}
+
+.search {
+  border: 1px solid $color-mainLogo;
+  border-radius: 33px;
+  width: 706px;
+  margin: 0 auto;
+  display: flex;
+
+  &:hover {
+    box-shadow: 0 4px 4px 0 #dedede;
+  }
+
+  .search-logo {
+    display: inline-block;
+    width: 68px;
+    height: 100%;
+    padding: 17px 17px 15px;
+    margin-right: 12px;
+
+    svg {
+      display: inline-block;
+
+      fill: $color-mainLogo;
+      width: 24px;
+      margin-right: 12px;
+      padding-left: 10px;
+    }
+  }
+
+  form {
+    display: inline-flex;
+    width: 87%;
+    align-items: center;
+
+    input {
+      width: 480px;
+      height: 24px;
+      padding: 17px 0;
+
+      font-size: 1em;
+      line-height: 24px;
+      font-weight: bold;
+
+      &::placeholder {
+        color: #d7d7d7;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .search__button--group {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    // line-height: 24px;
+
+    .keyboard-btn,
+    .recent-btn,
+    .search-btn {
+      &::before {
+        content: "";
+        display: block;
+        margin-right: 14px;
+      }
+    }
+  }
+
+  .keyboard-btn::before {
+    @include set-sprite(434px 422px, -50px -270px, 24px, 16px);
+  }
+
+  .recent-btn::before {
+    @include set-sprite(434px 422px, -323px -174px, 10px, 6px);
+  }
+
+  .search-btn::before {
+    @include set-sprite(434px 422px, -364px -213px, 25px, 25px);
+  }
+}

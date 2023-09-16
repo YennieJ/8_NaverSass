@@ -230,31 +230,24 @@ header {
 .search:hover {
   box-shadow: 0 4px 4px 0 #dedede;
 }
-.search .logo {
+.search .search-logo {
   display: inline-block;
   width: 68px;
   height: 100%;
-  padding: 17px;
+  padding: 17px 17px 15px;
   margin-right: 12px;
 }
-.search .logo svg {
+.search .search-logo svg {
   display: inline-block;
-  position: absolute;
   fill: #03c75a;
   width: 24px;
   margin-right: 12px;
   padding-left: 10px;
 }
-.search .logo h1 {
-  display: inline-block;
-  width: 68px;
-  height: 100%;
-  padding: 17px;
-  margin-right: 12px;
-}
 .search form {
   display: inline-flex;
-  width: 85%;
+  width: 87%;
+  align-items: center;
 }
 .search form input {
   width: 480px;
@@ -283,6 +276,7 @@ header {
 .search .search__button--group .search-btn::before {
   content: "";
   display: block;
+  margin-right: 14px;
 }
 .search .keyboard-btn::before {
   background-image: url("../images/sp_main.png");
