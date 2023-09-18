@@ -481,7 +481,104 @@ header {
 }
 
 .three {
-  background: blue;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+}
+
+.news__companies {
+  margin: 20px 10px 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+}
+.news__companies article {
+  flex-grow: 1;
+  width: 200px;
+  height: 50px;
+  list-style: none;
+  border: 1px solid #ebebeb;
+  text-align: center;
+}
+.news__companies article a {
+  display: block;
+  line-height: 50px;
+}
+
+.news__paging {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.news__paging .logo {
+  width: 120px;
+  height: 30px;
+  display: inline-block;
+  background-color: #03c75a;
+  border-radius: 2px;
+  position: relative;
+}
+.news__paging .logo .img-logo {
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -120px -165px;
+  background-repeat: no-repeat;
+  width: 72px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+.news__paging .logo:hover {
+  background-color: #17b75e;
+}
+.news__paging button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ebebeb;
+  border-radius: 100%;
+  background-color: transparent;
+  position: relative;
+}
+.news__paging button:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+.news__paging button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url("../images/sp_main.png");
+  background-size: 434px 422px;
+  background-position: -115px -389px;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 12px;
+}
+.news__paging button.btn-prev::before {
+  rotate: 180deg;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 
 .widgetboard {

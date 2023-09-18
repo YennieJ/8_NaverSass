@@ -1,3 +1,92 @@
 .three {
-  background: blue;
+  @include set-border(1px solid $color-border, 5px);
+}
+
+.news__companies {
+  margin: 20px 10px 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  @include set-border(1px solid $color-border, 5px);
+
+  article {
+    flex-grow: 1;
+    width: 200px;
+    height: 50px;
+    list-style: none;
+    border: 1px solid $color-border;
+    text-align: center;
+
+    a {
+      display: block;
+      line-height: 50px;
+    }
+  }
+}
+
+.news__paging {
+  @include set-flex(row, center, center);
+  gap: 10px;
+  padding: 10px;
+
+  .logo {
+    width: 120px;
+    height: 30px;
+    display: inline-block;
+    background-color: $color-mainLogo;
+    border-radius: 2px;
+    position: relative;
+
+    .img-logo {
+      @include set-sprite(434px 422px, -120px -165px, 72px, 15px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+    }
+
+    &:hover {
+      background-color: $color-mainLogo-hover;
+    }
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    @include set-border(1px solid $color-border, 100%);
+    background-color: transparent;
+    position: relative;
+
+    &:hover {
+      @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, .12));
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      @include set-sprite(434px 422px, -115px -389px, 10px, 12px);
+    }
+
+    &.btn-prev::before {
+      rotate: 180deg;
+    }
+  }
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
