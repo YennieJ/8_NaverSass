@@ -230,6 +230,7 @@ header {
 }
 .search:hover {
   box-shadow: 0 4px 4px 0 #dedede;
+  transition: all 0.2s;
 }
 .search .search-logo {
   display: inline-block;
@@ -252,17 +253,22 @@ header {
 }
 .search form input {
   width: 480px;
-  height: 24px;
   padding: 17px 0;
   font-size: 1em;
   line-height: 24px;
   font-weight: bold;
 }
 .search form input::-moz-placeholder {
+  color: #fff;
+}
+.search form input::placeholder {
+  color: #fff;
+}
+.search form input:hover::-moz-placeholder {
   color: #d7d7d7;
   font-weight: 500;
 }
-.search form input::placeholder {
+.search form input:hover::placeholder {
   color: #d7d7d7;
   font-weight: 500;
 }

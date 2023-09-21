@@ -11,6 +11,7 @@ header {
 
   &:hover {
     box-shadow: 0 4px 4px 0 #dedede;
+    transition: all 0.2s;
   }
 
   .search-logo {
@@ -37,7 +38,6 @@ header {
 
     input {
       width: 480px;
-      height: 24px;
       padding: 17px 0;
 
       font-size: 1em;
@@ -45,8 +45,14 @@ header {
       font-weight: bold;
 
       &::placeholder {
-        color: #d7d7d7;
-        font-weight: 500;
+        color: #fff;
+      }
+
+      &:hover {
+        &::placeholder {
+          color: #d7d7d7;
+          font-weight: 500;
+        }
       }
     }
   }
