@@ -12,3 +12,17 @@ body {
   height: 1px;
   margin: -1px;
 }
+
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-aside {
+  width: 420px;
+}
