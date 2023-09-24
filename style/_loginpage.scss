@@ -62,8 +62,8 @@
     }
 
     .checkbox-toggle-wrap {
-      @include set-flex(row, space-around, center);
-      width: 180%;
+      @include set-flex(row, space-between, center);
+      width: 145%;
       padding: 15px 0px;
     }
 
