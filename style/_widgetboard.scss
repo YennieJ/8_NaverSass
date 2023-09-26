@@ -13,7 +13,7 @@
 
 .widgetboard__title {
   color: $color-selectedTitle;
-  @include set-font("Gothic800", 800, $color-selectedTitle, 18px, 24px);
+  @include set-font("Gothic600", 600, $color-selectedTitle, 18px, 24px);
 }
 
 .widgetboard__memo {
@@ -66,7 +66,7 @@
 
     flex-basis: 50%;
 
-    @include set-font("Gothic800", 800, $color-white, 18px, 34px);
+    @include set-font("Gothic500", 500, $color-white, 18px, 34px);
   }
 }
 
@@ -165,7 +165,7 @@
 .memo__item {
   padding: 0 18px;
 
-  @include set-font(Gothic200, 500, $color-defaultText, 18px, 46px);
+  @include set-font("Gothic200", 200, $color-defaultText, 18px, 46px);
 
   a {
     display: flex;
@@ -251,7 +251,7 @@
     span {
       display: inline-block;
 
-      @include set-font("Gothic400", 600, $color-white, 16px, 39px);
+      @include set-font("Gothic400", 400, $color-white, 16px, 39px);
 
       vertical-align: top;
     }
