@@ -1,11 +1,5 @@
-@import "reset.css";
-@import "mixin.scss";
-
-.two {
+.icons {
   margin: 20px;
-}
-
-#nav {
   text-decoration: none;
   text-align: center;
 
@@ -16,6 +10,7 @@
   }
 
   li {
+    @include set-font("Gothic500", 500, $color-white, 14px, 20px);
     width: 64px;
     margin-left: 4px;
 
@@ -28,7 +23,7 @@
     text-decoration-line: none;
     text-align: center;
 
-    div span{
+    div span {
       margin: 30px;
     }
 
@@ -47,13 +42,11 @@
   overflow: hidden;
 }
 
-#nav .serviceList .serviceList__link {
-  
+.serviceList__link {
   display: block;
   width: 64px;
 
   .serviceList__icon {
-    
     display: block;
     width: 48px;
     height: 50px;
@@ -70,7 +63,7 @@
   }
 }
 
-#nav .serviceList .serviceList__link .serviceList__icon {
+.serviceList__icon {
   position: relative;
 
   &::before {
@@ -105,23 +98,71 @@
 }
 
 $icons: (
-  serviceList__icon--mail: (438px 429px, -250px -90px, 48px, 48px),
-  serviceList__icon--cafe: (438px 422px, -251px 2px, 48px, 48px),
-  serviceList__icon--blog: (438px 423px, -201px -95px, 48px, 48px),
-  serviceList__icon--shopping: (434px 422px, -88.5px -207px, 47px, 47px),
-  serviceList__icon--news: (434px 422px, 2px -206px, 48px, 48px),
-  serviceList__icon--stock: (434px 422px, -178px -206px, 48px, 48px),
-  serviceList__icon--real: (434px 422px, -44px -207px, 47px, 47px),
-  serviceList__icon--map: (434px 422px, -201px 2px, 48px, 48px),
-  serviceList__icon--webtoon: (434px 422px, -222px -206px, 48px, 48px),
-  serviceList__icon--more: (434px 422px, -248px -132px, 48px, 48px)
+  serviceList__icon--mail: (
+    438px 429px,
+    -250px -90px,
+    48px,
+    48px,
+  ),
+  serviceList__icon--cafe: (
+    438px 422px,
+    -251px 2px,
+    48px,
+    48px,
+  ),
+  serviceList__icon--blog: (
+    438px 423px,
+    -201px -95px,
+    48px,
+    48px,
+  ),
+  serviceList__icon--shopping: (
+    434px 422px,
+    -88.5px -207px,
+    47px,
+    47px,
+  ),
+  serviceList__icon--news: (
+    434px 422px,
+    2px -206px,
+    48px,
+    48px,
+  ),
+  serviceList__icon--stock: (
+    434px 422px,
+    -178px -206px,
+    48px,
+    48px,
+  ),
+  serviceList__icon--real: (
+    434px 422px,
+    -44px -207px,
+    47px,
+    47px,
+  ),
+  serviceList__icon--map: (
+    434px 422px,
+    -201px 2px,
+    48px,
+    48px,
+  ),
+  serviceList__icon--webtoon: (
+    434px 422px,
+    -222px -206px,
+    48px,
+    48px,
+  ),
+  serviceList__icon--more: (
+    434px 422px,
+    -248px -132px,
+    48px,
+    48px,
+  ),
 );
 
 // '@each list data 반복문' 문법
-#nav .serviceList .serviceList__link .serviceList__icon {
-
-  @each $icon,
-  $properties in $icons {
+.serviceList__icon {
+  @each $icon, $properties in $icons {
     &.#{$icon}::after {
       @include set-sprite($properties...);
     }

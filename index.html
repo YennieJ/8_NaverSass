@@ -8,37 +8,23 @@
   <link rel="stylesheet" href="style/style.css" />
   <title>8조</title>
 
-  <style>
-    .container {
-      width: 1280px;
-      margin: auto;
-    }
 
-    main {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .section-aside {
-      width: 420px;
-    }
-  </style>
   <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
   <div class="container">
-    <header class="header">
+    <header class="container__header">
       <div class="search">
         <h1 class="search-logo">
           <a href="https://www.naver.com">
-            <svg viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg%22%3E">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg%22%3E">
               <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
             </svg>
           </a>
         </h1>
-        <form action="">
-          <input id="search-input" class="search-input" type="search" placeholder="검색어를 입력해 주세요." />
+        <form>
+          <input type="search" placeholder="검색어를 입력해 주세요." />
           <div class="search__button--group">
             <button type="button" class="keyboard-btn">
               <span class="btn-inner blind">입력도구</span>
@@ -52,65 +38,65 @@
           </div>
         </form>
       </div>
-      <nav class="two" id="nav">
+      <nav class="icons">
         <ul class="serviceList">
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--mail"></div>
+              <i class="serviceList__icon serviceList__icon--mail"></i>
               <span class="serviceList__name">메일</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--cafe"></div>
+              <i class="serviceList__icon serviceList__icon--cafe"></i>
               <span class="serviceList__name">카페</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--blog"></div>
+              <i class="serviceList__icon serviceList__icon--blog"></i>
               <span class="serviceList__name">블로그</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--shopping"></div>
+              <i class="serviceList__icon serviceList__icon--shopping"></i>
               <span class="serviceList__name">쇼핑</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--news"></div>
+              <i class="serviceList__icon serviceList__icon--news"></i>
               <span class="serviceList__name">뉴스</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--stock"></div>
+              <i class="serviceList__icon serviceList__icon--stock"></i>
               <span class="serviceList__name">증권</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--real"></div>
+              <i class="serviceList__icon serviceList__icon--real"></i>
               <span class="serviceList__name">부동산</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--map"></div>
+              <i class="serviceList__icon serviceList__icon--map"></i>
               <span class="serviceList__name">지도</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--webtoon"></div>
+              <i class="serviceList__icon serviceList__icon--webtoon"></i>
               <span class="serviceList__name">웹툰</span>
             </a>
           </li>
           <li class="serviceList__item">
             <a href="#" class="serviceList__link">
-              <div class="serviceList__icon serviceList__icon--more"></div>
+              <i class="serviceList__icon serviceList__icon--more"></i>
               <span class="serviceList__name serviceList__name--blind">바로가기 펼침</span>
             </a>
           </li>
@@ -139,7 +125,7 @@
           <button class="btn-prev">
             <span class="a11y-hidden">이전 페이지</span>
           </button>
-          <a class="logo">
+          <a class="new__paging__logo">
             <div class="img-logo" aria-label="네이버 로고"></div>
           </a>
           <button class="btn-next">
