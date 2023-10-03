@@ -192,12 +192,6 @@ button {
   src: url("/fonts/AppleSDGothicNeoH.ttf") format("truetype");
 }
 body {
-  font-family: Gothic500, sans-serif;
-  font-weight: 500;
-  color: #101010;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
-  font-style: normal;
   font-family: Noto400, sans-serif;
   font-weight: 400;
   color: #101010;
@@ -220,6 +214,10 @@ body {
   margin: auto;
 }
 
+.container__header {
+  margin-top: 64px;
+}
+
 main {
   display: flex;
   justify-content: space-between;
@@ -227,10 +225,6 @@ main {
 
 .section-aside {
   width: 420px;
-}
-
-.container__header {
-  margin-top: 64px;
 }
 
 .search {
@@ -322,17 +316,17 @@ main {
   height: 25px;
 }
 
-.icons {
+.nav {
   margin: 20px;
   text-decoration: none;
   text-align: center;
 }
-.icons ul {
+.nav ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
 }
-.icons li {
+.nav li {
   font-family: "Gothic500", sans-serif;
   font-weight: 500;
   color: #ffffff;
@@ -342,38 +336,16 @@ main {
   width: 64px;
   margin-left: 4px;
 }
-.icons li:nth-of-type(1) {
+.nav li:nth-of-type(1) {
   margin-left: 0;
 }
-.icons a {
-  text-decoration-line: none;
-  text-align: center;
-}
-.icons a div span {
-  margin: 30px;
-}
-.icons a:visited {
+.nav a:visited {
   color: black;
-}
-
-.serviceList__item .serviceList__name--blind {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
 }
 
 .serviceList__link {
   display: block;
   width: 64px;
-}
-.serviceList__link .serviceList__icon {
-  display: block;
-  width: 48px;
-  height: 50px;
-  margin: 0 auto;
 }
 .serviceList__link .serviceList__name {
   overflow: hidden;
@@ -386,6 +358,10 @@ main {
 
 .serviceList__icon {
   position: relative;
+  display: block;
+  width: 48px;
+  height: 50px;
+  margin: 0 auto;
 }
 .serviceList__icon::before {
   content: "";
@@ -501,22 +477,25 @@ main {
   height: 48px;
 }
 
-.three {
+.news {
+  width: 830px;
   border: 1px solid #ebebeb;
   border-radius: 5px;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+  box-shadow: 0;
+  position: relative;
 }
 
 .news__companies {
-  margin: 20px 10px 0 10px;
+  margin: 120px 10px 0 10px;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  border: 1px solid #ebebeb;
-  border-radius: 5px;
 }
 .news__companies li {
   font-family: "Gothic400", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: 14px;
   font-size: 20px;
   line-height: 1.7rem;
@@ -540,7 +519,11 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 20px;
+  border-top: 1px solid #ebebeb;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .news__paging .new__paging__logo {
   width: 120px;
@@ -595,18 +578,6 @@ main {
 }
 .news__paging button.btn-prev::before {
   rotate: 180deg;
-}
-
-.a11y-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
 }
 
 .widgetboard {
@@ -847,11 +818,11 @@ main {
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
-  border: 1px solid #dadcdf;
+  border: 1px solid #e3e5e8;
   border-radius: 8px;
   box-shadow: 0;
   font-family: "Gothic500", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #101010;
   font-size: 16px;
   line-height: 20px;
@@ -859,6 +830,7 @@ main {
   text-align: center;
   background-color: #ffffff;
   padding: 21px 20px 18px;
+  margin-bottom: 16px;
 }
 .account .account__login {
   font-family: "Gothic500", sans-serif;
@@ -891,7 +863,7 @@ main {
 }
 .account .account__find {
   font-family: "Gothic500", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #606060;
   font-size: 14px;
   line-height: underline;
@@ -1093,6 +1065,7 @@ main {
   font-size: 14px;
   line-height: 17px;
   font-style: normal;
+  margin-right: 5px;
 }
 .login-wrap .checkbox-toggle-wrap__checkbox-text,
 .login-wrap .checkbox-toggle-wrap__toggle-text {
