@@ -134,6 +134,7 @@
 
   .checkbox-toggle-wrap__toggle-text {
     @include set-font("Noto400", 500, #777, 14px, 17px);
+    margin-right: 5px;
   }
 
   .checkbox-toggle-wrap__checkbox-text,
