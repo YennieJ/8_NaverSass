@@ -1,6 +1,4 @@
 body {
-  @include set-font(Gothic500, 500);
-
   @include set-font(Noto400, 400);
 }
 
@@ -16,6 +14,10 @@ body {
 .container {
   width: 1280px;
   margin: auto;
+}
+
+.container__header {
+  margin-top: 64px;
 }
 
 main {
