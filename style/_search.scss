@@ -1,7 +1,3 @@
-.container__header {
-  margin-top: 64px;
-}
-
 .search {
   border: 1px solid $color-mainLogo;
   border-radius: 33px;
@@ -62,8 +58,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
-
-    // line-height: 24px;
 
     .keyboard-btn,
     .recent-btn,
